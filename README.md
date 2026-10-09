@@ -1,43 +1,32 @@
 # Shum Site
 
-Сайт мессенджера Shum. Next.js со статической выгрузкой: на выходе обычные
-HTML, CSS и SVG без сервера, их можно положить на любой статический хостинг.
+English · [Русский](README.ru.md)
 
-Макет: Figma, страница «Сайт · Shum».
+Information and downloads website for Shum. Next.js with static export, Russian and English content, and light and dark themes.
 
-## Запуск
+## Run
 
 ```sh
-npm install
-npm run dev        # http://localhost:3100
-npm run build      # готовый сайт в out/
+npm ci
+npm run dev
+npm run build
 ```
 
-## Устройство
+Development: `http://localhost:3100`. Production output: `out/`, ready for static hosting. No application server required.
 
-- `app/(ru)` и `app/en`: русская версия в корне, английская под `/en/`. У каждой
-  свой корневой макет с правильным `lang`.
-- `components/pages/`: страницы Обзор, Загрузки, Документация, Протокол,
-  Безопасность, общие для двух языков.
-- `lib/i18n.ts`: все тексты сайта на русском и английском.
-- `components/pixel.tsx`: логотип по сетке иконки приложения, пиксельные
-  ступеньки между секциями, пиксельный шум (детерминированный, как в макете).
-- `components/ui.tsx`: шапка страницы, бейджи, карточки установки, раскладка
-  документации.
-- `app/globals.css`: цвета и размеры из переменных Figma «Shum · сайт», тёмная
-  и светлая темы. Тема берётся из системы, кнопка в шапке её меняет и
-  запоминает выбор. Блоки с командами тёмные в обеих темах.
+## Structure
 
-## Принципы
+- `app/(ru)` and `app/en`: Russian at the root, English under `/en/`.
+- `components/pages/`: overview, downloads, documentation, protocol and security.
+- `lib/i18n.ts`: content for both languages.
+- `components/` and `app/globals.css`: shared UI, pixel graphics and themes.
 
-- Шрифты Pixelify Sans, Tiny5, Inter и JetBrains Mono (лицензия OFL) раздаются с
-  самого сайта через Fontsource, без запросов к Google.
-- Нет аналитики и сторонних скриптов.
-- JavaScript нужен только кнопке копирования команды и мобильному меню.
+The design comes from the Figma page “Сайт · Shum”. Fonts are served locally through Fontsource under OFL. There are no analytics or third-party scripts. Theme selection, command copying and mobile navigation use client-side JavaScript.
 
-## Перед публикацией
+## Downloads and documentation
 
-- Карточку `curl` на странице «Загрузки» показывать только после выпуска
-  `install.sh` в Shum-CLI.
-- Спецификация протокола пока только на русском, английская страница
-  «Протокол» об этом предупреждает.
+[CLI 0.1.6](https://github.com/hiTechTeam/Shum-CLI/releases/tag/v0.1.6) and its installer script are published. Download commands should link to real packages; platforms still in development should be labeled accordingly.
+
+The protocol specification is currently in Russian. English protocol pages should make that clear.
+
+[CLI](https://github.com/hiTechTeam/Shum-CLI) · [iOS](https://github.com/hiTechTeam/Shum-iOS) · [Core](https://github.com/hiTechTeam/Shum-Core) · [Protocol](https://github.com/hiTechTeam/Shum-Protocol)
