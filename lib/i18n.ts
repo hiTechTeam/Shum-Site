@@ -231,7 +231,11 @@ const ru = {
       ["Ключи профиля", "На вашем устройстве", "Без ключей профиль не восстановить. Делайте резервную копию."],
       ["История переписки", "Локальное хранилище клиента", "Переписка защищена настолько, насколько защищено устройство."],
       ["Зашифрованные сообщения", "Устройства и релейный транспорт", "Сколько хранить конверты, решает каждый релей."],
-      ["Метаданные соединения", "У сетевой инфраструктуры", "Шифрование скрывает текст, но не сам факт соединения."],
+      [
+        "Метаданные соединения",
+        "У сетевой инфраструктуры",
+        "Шифрование скрывает текст, но не сам факт соединения. В следующих версиях можно будет по желанию подключаться через Tor: тогда релеи не увидят ваш IP-адрес, а провайдер не узнает, к каким релеям вы подключаетесь.",
+      ],
       [
         "Уведомления",
         "Push-сервер Shum и Apple",
@@ -478,7 +482,11 @@ const en: Dict = {
       ["Profile keys", "On your device", "Without the keys a profile cannot be restored. Make a backup."],
       ["Chat history", "Local app storage", "Your chats are only as safe as your device."],
       ["Encrypted messages", "Devices and relay transport", "Each relay decides how long to keep envelopes."],
-      ["Connection metadata", "Network infrastructure", "Encryption hides the text, not the fact that a connection happened."],
+      [
+        "Connection metadata",
+        "Network infrastructure",
+        "Encryption hides the text, not the fact that a connection happened. Future versions will let you connect over Tor if you choose: relays will not see your IP address, and your provider will not see which relays you use.",
+      ],
       [
         "Notifications",
         "Shum push server and Apple",
