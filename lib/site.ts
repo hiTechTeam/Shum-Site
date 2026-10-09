@@ -1,3 +1,5 @@
+export const siteUrl = "https://shum.space";
+
 // The protocol lives inside the documentation, so it has no item of its own.
 export const sectionPaths = ["/", "/downloads/", "/docs/", "/security/"] as const;
 
@@ -11,6 +13,10 @@ export const repos = [
 ] as const;
 
 export const specUrl = (file: string) => `${github}/Shum-Protocol/blob/main/spec/${file}`;
+
+// Shum-CLI has not published install.sh yet. Flip this once it is released,
+// and the curl card appears on the downloads page.
+export const INSTALL_SCRIPT_READY = false;
 
 export const installScript = "https://raw.githubusercontent.com/hiTechTeam/Shum-CLI/main/install.sh";
 export const installScriptSource = `${github}/Shum-CLI/blob/main/install.sh`;

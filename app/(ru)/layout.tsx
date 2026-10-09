@@ -2,13 +2,14 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { SiteShell } from "@/components/SiteShell";
 import { dict } from "@/lib/i18n";
+import { siteUrl } from "@/lib/site";
 
 const t = dict.ru.meta;
 
 export const metadata: Metadata = {
   title: { default: t.title, template: "%s | Shum" },
   description: t.description,
-  alternates: { languages: { ru: "/", en: "/en/" } },
+  metadataBase: new URL(siteUrl),
 };
 
 export const viewport: Viewport = {

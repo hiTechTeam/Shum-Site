@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Arrow, PixelStep } from "@/components/pixel";
 import { Badge, BlockHead, Install, PageHeader } from "@/components/ui";
 import { dict, href, type Lang } from "@/lib/i18n";
-import { installScript, installScriptSource } from "@/lib/site";
+import { INSTALL_SCRIPT_READY, installScript, installScriptSource } from "@/lib/site";
 
 const BEFORE_PATHS = ["/docs/", "/docs/#message", "/security/"];
 
@@ -69,8 +69,9 @@ export function Downloads({ lang }: { lang: Lang }) {
       <section className="section-tight">
         <div className="container stack-24">
           <BlockHead title={t.cli[0]} text={t.cli[1]} />
-          <div className="grid-2">
+          <div className={INSTALL_SCRIPT_READY ? "grid-2" : "grid-1"}>
             <Install lang={lang} system="macOS" tool="Homebrew" command="brew install hitechteam/shum/shum" note={t.brewNote} />
+            {INSTALL_SCRIPT_READY && (
             <Install
               lang={lang}
               system="macOS"
@@ -83,6 +84,7 @@ export function Downloads({ lang }: { lang: Lang }) {
                 </>
               }
             />
+            )}
           </div>
           <div className="grid-3">
             <Install lang={lang} system="Windows" tool="winget" note={t.soon} />

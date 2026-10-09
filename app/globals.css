@@ -207,6 +207,7 @@ img { image-rendering: pixelated; }
 .stack-24 { display: grid; gap: 24px; }
 .stack-28 { display: grid; gap: 28px; }
 .block-head { display: grid; gap: 24px; }
+.grid-1 { display: grid; grid-template-columns: 1fr; gap: 24px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .row-16 { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
