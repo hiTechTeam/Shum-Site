@@ -230,7 +230,11 @@ const ru = {
     data: [
       ["Ключи профиля", "На вашем устройстве", "Без ключей профиль не восстановить. Делайте резервную копию."],
       ["История переписки", "Локальное хранилище клиента", "Переписка защищена настолько, насколько защищено устройство."],
-      ["Зашифрованные сообщения", "Устройства и релейный транспорт", "Сколько хранить конверты, решает каждый релей."],
+      [
+        "Зашифрованные сообщения",
+        "Устройства и релейный транспорт",
+        "Сколько хранить конверты, решает каждый релей. В следующих версиях можно будет поставить свой релей, объединить релеи в свою сеть для своих людей или развернуть полностью свой сервер.",
+      ],
       [
         "Метаданные соединения",
         "У сетевой инфраструктуры",
@@ -481,7 +485,11 @@ const en: Dict = {
     data: [
       ["Profile keys", "On your device", "Without the keys a profile cannot be restored. Make a backup."],
       ["Chat history", "Local app storage", "Your chats are only as safe as your device."],
-      ["Encrypted messages", "Devices and relay transport", "Each relay decides how long to keep envelopes."],
+      [
+        "Encrypted messages",
+        "Devices and relay transport",
+        "Each relay decides how long to keep envelopes. Future versions will let you run your own relay, link relays into a network for your people, or host a complete server yourself.",
+      ],
       [
         "Connection metadata",
         "Network infrastructure",
