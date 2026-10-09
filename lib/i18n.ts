@@ -23,7 +23,7 @@ const ru = {
     theme: { toLight: "Светлая тема", toDark: "Тёмная тема" },
   },
   footer: {
-    tagline: ["Децентрализованный мессенджер.", "Ключи остаются у вас."],
+    tagline: "Децентрализованный мессенджер.",
     product: "Продукт",
     developers: "Разработчикам",
     about: "О Shum",
@@ -270,7 +270,7 @@ const en: Dict = {
     theme: { toLight: "Light theme", toDark: "Dark theme" },
   },
   footer: {
-    tagline: ["A decentralized messenger.", "Your keys stay with you."],
+    tagline: "A decentralized messenger.",
     product: "Product",
     developers: "Developers",
     about: "About Shum",

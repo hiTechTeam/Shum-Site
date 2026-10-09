@@ -14,11 +14,7 @@ export function Footer({ lang }: { lang: Lang }) {
             <Logo />
             <span>Shum</span>
           </Link>
-          <p>
-            {t.tagline[0]}
-            <br />
-            {t.tagline[1]}
-          </p>
+          <p>{t.tagline}</p>
         </div>
         <div className="footer-col">
           <h2>{t.product}</h2>
