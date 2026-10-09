@@ -443,7 +443,7 @@ const en: Dict = {
       ["Transport", "Bluetooth nearby or Nostr over the internet"],
     ],
     specTitle: "Specification v1",
-    specNote: "The specification is currently written in Russian; the repository README is in English.",
+    specNote: "",
     repo: "Protocol repository on GitHub",
     spec: [
       "Overview and terms",

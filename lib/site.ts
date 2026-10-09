@@ -16,7 +16,8 @@ export const repos = [
 export const readmeUrl = (repoHref: string, lang: "ru" | "en") =>
   lang === "ru" ? `${repoHref}/blob/main/README.ru.md` : repoHref;
 
-export const specUrl = (file: string) => `${github}/Shum-Protocol/blob/main/spec/${file}`;
+/** The specification is published in spec/en and spec/ru. */
+export const specUrl = (file: string, lang: "ru" | "en") => `${github}/Shum-Protocol/blob/main/spec/${lang}/${file}`;
 
 // install.sh shipped with Shum-CLI 0.1.6. Set to false to hide the curl card
 // if the script is ever pulled.

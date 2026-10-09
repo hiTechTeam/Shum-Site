@@ -61,7 +61,7 @@ export function Protocol({ lang }: { lang: Lang }) {
           </a>
           <div className="spec-list">
             {t.spec.map((title, i) => (
-              <a key={SPEC_FILES[i]} href={specUrl(SPEC_FILES[i])} className="spec-row" target="_blank" rel="noreferrer">
+              <a key={SPEC_FILES[i]} href={specUrl(SPEC_FILES[i], lang)} className="spec-row" target="_blank" rel="noreferrer">
                 <span className="label">{String(i).padStart(2, "0")}</span>
                 <span>{title}</span>
                 <Arrow />
