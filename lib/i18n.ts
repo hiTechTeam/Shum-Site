@@ -39,6 +39,7 @@ const ru = {
   common: {
     more: "Перейти в раздел",
     inDev: "В разработке",
+    review: "На ревью в App Store",
     pending: "Пакет готовится",
     copy: "Копировать",
     copied: "Скопировано",
@@ -81,7 +82,7 @@ const ru = {
       ["CLI для macOS", "CLI, через Homebrew или curl"],
       ["CLI для Linux и Windows", "CLI"],
     ],
-    preview: "Превью 0.1.6",
+    preview: "Превью 0.1.7",
     trustLabel: "Безопасность",
     trustTitle: ["Понимать, кому", "вы доверяете."],
     trustText:
@@ -94,7 +95,7 @@ const ru = {
     title: "Скачать Shum",
     lead: "Shum пока в разработке. Здесь видно, что уже можно попробовать, а что ещё впереди.",
     mobile: ["Мобильные устройства", "Shum в кармане: переписка рядом по Bluetooth и через интернет."],
-    ios: ["Shum для iPhone", "Переписка, люди рядом и контакты по QR-коду. Готовится к выходу в App Store.", "Готовится к выходу"],
+    ios: ["Shum для iPhone", "Переписка, люди рядом и контакты по QR-коду. Версия уже отправлена в App Store и проходит проверку.", "Скоро в App Store"],
     android: ["Shum для Android", "Появится после версии для iPhone.", "В планах"],
     desktop: ["Десктоп", "Shum на компьютере: та же переписка, что на телефоне, и связь рядом по Bluetooth."],
     desktopApps: [
@@ -106,7 +107,7 @@ const ru = {
     web: ["Shum в браузере", "Веб-версия в разработке.", "Открыть веб-версию"],
     cli: [
       "CLI",
-      "Shum для тех, кто живёт в терминале: команды и полноэкранный интерфейс. Превью 0.1.6 для macOS 15 и новее, Apple Silicon и Intel.",
+      "Shum для тех, кто живёт в терминале: команды и полноэкранный интерфейс. Превью 0.1.7 для macOS 15 и новее, Apple Silicon и Intel.",
     ],
     brewNote: "macOS 15 и новее, Apple Silicon и Intel. Обновление командой brew upgrade.",
     curlNote: "Без Homebrew и без sudo. Скачивает выпуск из GitHub Releases и сверяет SHA-256.",
@@ -294,6 +295,7 @@ const en: Dict = {
   common: {
     more: "Open section",
     inDev: "In development",
+    review: "In App Store review",
     pending: "Package in progress",
     copy: "Copy",
     copied: "Copied",
@@ -336,7 +338,7 @@ const en: Dict = {
       ["CLI for macOS", "CLI, via Homebrew or curl"],
       ["CLI for Linux and Windows", "CLI"],
     ],
-    preview: "Preview 0.1.6",
+    preview: "Preview 0.1.7",
     trustLabel: "Security",
     trustTitle: ["Know who", "you trust."],
     trustText:
@@ -349,7 +351,7 @@ const en: Dict = {
     title: "Get Shum",
     lead: "Shum is still in development. Here you can see what you can try today and what is coming next.",
     mobile: ["Mobile", "Shum in your pocket: chat nearby over Bluetooth and over the internet."],
-    ios: ["Shum for iPhone", "Chats, people nearby and contacts by QR code. Getting ready for the App Store.", "Coming soon"],
+    ios: ["Shum for iPhone", "Chats, people nearby and contacts by QR code. The app has been submitted and is being reviewed by Apple.", "Coming soon to the App Store"],
     android: ["Shum for Android", "Coming after the iPhone version.", "Planned"],
     desktop: ["Desktop", "Shum on your computer: the same chats as on your phone, plus Bluetooth nearby."],
     desktopApps: [
@@ -361,7 +363,7 @@ const en: Dict = {
     web: ["Shum in the browser", "The web version is in development.", "Open web version"],
     cli: [
       "CLI",
-      "Shum for people who live in the terminal: commands and a full-screen interface. Preview 0.1.6 for macOS 15 or later, Apple Silicon and Intel.",
+      "Shum for people who live in the terminal: commands and a full-screen interface. Preview 0.1.7 for macOS 15 or later, Apple Silicon and Intel.",
     ],
     brewNote: "macOS 15 or later, Apple Silicon and Intel. Update with brew upgrade.",
     curlNote: "No Homebrew, no sudo. Downloads the release from GitHub Releases and checks its SHA-256.",

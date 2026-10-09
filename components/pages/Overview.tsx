@@ -4,6 +4,7 @@ import { dict, href, type Lang } from "@/lib/i18n";
 
 // CLI for macOS is the only client people can try today.
 const READY_INDEX = 6;
+const REVIEW_INDEX = 0;
 const CARD_PATHS = ["/downloads/", "/docs/", "/protocol/"];
 
 export function Overview({ lang }: { lang: Lang }) {
@@ -92,9 +93,13 @@ export function Overview({ lang }: { lang: Lang }) {
                 <tr key={name}>
                   <td>{name}</td>
                   <td>
-                    <span className={i === READY_INDEX ? "status is-ready" : "status"}>
-                      {i === READY_INDEX ? t.preview : c.inDev}
-                    </span>
+                    {i === READY_INDEX ? (
+                      <span className="status is-ready">{t.preview}</span>
+                    ) : i === REVIEW_INDEX ? (
+                      <span className="status is-review">{c.review}</span>
+                    ) : (
+                      <span className="status">{c.inDev}</span>
+                    )}
                   </td>
                   <td>{where}</td>
                 </tr>

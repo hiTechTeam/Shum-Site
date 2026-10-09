@@ -10,8 +10,8 @@ export function Downloads({ lang }: { lang: Lang }) {
   const t = dict[lang].downloads;
   const c = dict[lang].common;
   const mobile = [
-    { name: "iOS", info: t.ios },
-    { name: "Android", info: t.android },
+    { name: "iOS", info: t.ios, review: true },
+    { name: "Android", info: t.android, review: false },
   ];
   return (
     <>
@@ -22,11 +22,11 @@ export function Downloads({ lang }: { lang: Lang }) {
         <div className="container stack-24">
           <BlockHead title={t.mobile[0]} text={t.mobile[1]} />
           <div className="grid-2">
-            {mobile.map(({ name, info: [title, text, meta] }) => (
+            {mobile.map(({ name, info: [title, text, meta], review }) => (
               <div key={name} className="platform">
                 <div className="platform-head">
                   <h2 className="h2">{name}</h2>
-                  <Badge>{c.inDev}</Badge>
+                  {review ? <Badge tone="review">{c.review}</Badge> : <Badge tone="dev">{c.inDev}</Badge>}
                 </div>
                 <h3 className="h3">{title}</h3>
                 <p className="lead">{text}</p>
@@ -45,7 +45,7 @@ export function Downloads({ lang }: { lang: Lang }) {
               <div key={name} className="platform platform-sm">
                 <h3 className="h3 h3-lg">{name}</h3>
                 <p className="muted">{text}</p>
-                <Badge>{c.inDev}</Badge>
+                <Badge tone="dev">{c.inDev}</Badge>
               </div>
             ))}
           </div>
@@ -59,7 +59,7 @@ export function Downloads({ lang }: { lang: Lang }) {
             <h3 className="h2">{t.web[0]}</h3>
             <p className="muted">{t.web[1]}</p>
             <div className="row-16">
-              <Badge>{c.inDev}</Badge>
+              <Badge tone="dev">{c.inDev}</Badge>
               <span className="btn btn-secondary is-disabled" aria-disabled>{t.web[2]} <Arrow /></span>
             </div>
           </div>

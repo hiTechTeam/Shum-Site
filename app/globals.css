@@ -14,6 +14,10 @@
   --accent-bright: #5df58a;
   --accent-shadow: #0e3f1a;
   --accent-text: #30d158;
+  /* Waiting on someone else, e.g. App Store review. */
+  --warn: #ffd60a;
+  --warn-text: #ffd60a;
+  --warn-bg: #2a2408;
   --logo: #5df58a;
   --hard-shadow: #000;
   --btn-border: rgba(235, 235, 245, 0.35);
@@ -53,6 +57,9 @@
   --accent-bright: #34c759;
   --accent-shadow: #0c2114;
   --accent-text: #1a7f37;
+  --warn: #ffcc00;
+  --warn-text: #8a6100;
+  --warn-bg: #fbf3d0;
   --logo: #34c759;
   --hard-shadow: #0c2114;
   --btn-border: rgba(12, 33, 20, 0.35);
@@ -191,6 +198,8 @@ img { image-rendering: pixelated; }
 .status::before { content: ""; width: 8px; height: 8px; border: 2px solid var(--marker); }
 .status.is-ready { color: var(--accent-text); }
 .status.is-ready::before { background: var(--accent); border-color: var(--accent); }
+.status.is-review { color: var(--warn-text); }
+.status.is-review::before { background: var(--warn); border-color: var(--warn); }
 
 .trust { background: var(--hero); }
 .trust .container { display: grid; grid-template-columns: 480px 1fr; gap: 80px; }
@@ -217,6 +226,8 @@ img { image-rendering: pixelated; }
 .platform-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .h3-lg { font-size: 30px; line-height: 36px; }
 .badge { justify-self: start; display: inline-flex; align-items: center; padding: 6px 10px; background: var(--hero); color: var(--accent-text); font: 400 12px/18px var(--mono); }
+.badge.is-dev { background: var(--line); color: var(--muted); }
+.badge.is-review { background: var(--warn-bg); color: var(--warn-text); }
 .meta { font: 400 12px/18px var(--mono); color: var(--muted); }
 .btn.is-disabled { opacity: 0.5; box-shadow: none; cursor: not-allowed; font: 400 16px/20px var(--body); padding: 6px 10px; }
 
@@ -224,7 +235,7 @@ img { image-rendering: pixelated; }
 .install > .label { font: 400 12px/16px var(--mono); text-transform: none; letter-spacing: 0; }
 .command { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 12px 16px; background: var(--code-bg); }
 .command code { font: 400 14px/20px var(--mono); color: var(--code-text); word-break: break-all; }
-.command code.pending { word-break: normal; }
+.command code.pending { word-break: normal; color: var(--code-muted); }
 .note-sm { font-size: 14px; line-height: 20px; color: var(--muted); }
 .inline-link { color: var(--text); white-space: nowrap; }
 .inline-link:hover { color: var(--accent-text); }

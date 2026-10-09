@@ -17,8 +17,8 @@ export function PageHeader({ eyebrow, title, lead }: { eyebrow: string; title: s
   );
 }
 
-export function Badge({ children }: { children: ReactNode }) {
-  return <span className="badge">{children}</span>;
+export function Badge({ children, tone }: { children: ReactNode; tone?: "review" | "dev" }) {
+  return <span className={tone ? `badge is-${tone}` : "badge"}>{children}</span>;
 }
 
 export function BlockHead({ title, text }: { title: string; text: string }) {
