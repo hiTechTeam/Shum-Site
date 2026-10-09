@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Arrow } from "@/components/pixel";
 import { Badge, DocsLayout, Note } from "@/components/ui";
 import { dict, href, type Lang } from "@/lib/i18n";
-import { specUrl } from "@/lib/site";
+import { readmeUrl, repos, specUrl } from "@/lib/site";
 
 const TOC_IDS = ["version", "concepts", "spec", "stable", "compat"];
 const SPEC_FILES = [
@@ -56,6 +56,9 @@ export function Protocol({ lang }: { lang: Lang }) {
         <section id="spec" className="doc-step">
           <h2 className="h3">{t.specTitle}</h2>
           {t.specNote && <p className="note-sm">{t.specNote}</p>}
+          <a href={readmeUrl(repos[3].href, lang)} className="inline-link" target="_blank" rel="noreferrer">
+            {t.repo} <Arrow />
+          </a>
           <div className="spec-list">
             {t.spec.map((title, i) => (
               <a key={SPEC_FILES[i]} href={specUrl(SPEC_FILES[i])} className="spec-row" target="_blank" rel="noreferrer">

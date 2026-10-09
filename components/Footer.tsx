@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Arrow, Logo } from "./pixel";
 import { dict, href, type Lang } from "@/lib/i18n";
-import { repos } from "@/lib/site";
+import { readmeUrl, repos } from "@/lib/site";
 
 export function Footer({ lang }: { lang: Lang }) {
   const t = dict[lang].footer;
@@ -30,7 +30,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <Link href={to("/protocol/")}>{t.protocol}</Link>
           <Link href={to("/docs/")}>{t.docs}</Link>
           {repos.map((r) => (
-            <a key={r.name} href={r.href} className="repo">
+            <a key={r.name} href={readmeUrl(r.href, lang)} className="repo">
               {r.name} <Arrow />
             </a>
           ))}

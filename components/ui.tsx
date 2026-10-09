@@ -1,8 +1,8 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { CopyButton, type CopyLabels } from "./CopyCommand";
 import { dict, href, type Lang } from "@/lib/i18n";
 import { BandNoise } from "./pixel";
+import { DocsNav, type MenuGroup } from "./DocsNav";
 
 export function PageHeader({ eyebrow, title, lead }: { eyebrow: string; title: string; lead: string }) {
   return (
@@ -63,11 +63,7 @@ export function Install({
   );
 }
 
-/**
- * Documentation layout: section menu, article, table of contents.
- * Links that point at a part of a page are plain anchors: the router does not
- * scroll for a hash on the page that is already open.
- */
+/** Documentation layout: section menu, article, table of contents. */
 export function DocsLayout({
   lang,
   current,
@@ -75,43 +71,35 @@ export function DocsLayout({
   children,
 }: {
   lang: Lang;
-  current: string;
+  current: "/docs/" | "/protocol/";
   toc: { id: string; label: string }[];
   children: ReactNode;
 }) {
   const t = dict[lang].docsMenu;
-  const guide = ["/docs/", "/downloads/", "/docs/#contact", "/docs/#message"];
-  const technical = ["/protocol/", "/security/", "/protocol/#stable"];
-  const item = (path: string, label: string) => {
-    const to = href(lang, path);
-    const isActive = path === current;
-    return path.includes("#") ? (
-      <a key={path} href={to}>{label}</a>
-    ) : (
-      <Link key={path} href={to} className={isActive ? "is-active" : undefined} aria-current={isActive ? "page" : undefined}>
-        {label}
-      </Link>
-    );
-  };
+  const to = (p: string) => href(lang, p);
+  const groups: MenuGroup[] = [
+    {
+      title: t.guide,
+      items: [
+        { href: to("/docs/"), label: t.guideLinks[0], page: current === "/docs/" },
+        { href: to("/downloads/"), label: t.guideLinks[1] },
+        { href: to("/docs/#profile"), label: t.guideLinks[2], sections: ["profile", "contact"] },
+        { href: to("/docs/#transports"), label: t.guideLinks[3], sections: ["transports"] },
+      ],
+    },
+    {
+      title: t.technical,
+      items: [
+        { href: to("/protocol/"), label: t.technicalLinks[0], page: current === "/protocol/" },
+        { href: to("/security/"), label: t.technicalLinks[1] },
+        { href: to("/protocol/#stable"), label: t.technicalLinks[2], sections: ["stable"] },
+      ],
+    },
+  ];
   return (
     <div className="container docs">
-      <aside className="docs-menu" aria-label={t.menuLabel}>
-        <div className="docs-group">
-          <span className="label">{t.guide}</span>
-          {guide.map((p, i) => item(p, t.guideLinks[i]))}
-        </div>
-        <div className="docs-group">
-          <span className="label">{t.technical}</span>
-          {technical.map((p, i) => item(p, t.technicalLinks[i]))}
-        </div>
-      </aside>
+      <DocsNav groups={groups} toc={toc} menuLabel={t.menuLabel} tocLabel={t.onThisPage} />
       <article className="docs-article">{children}</article>
-      <nav className="docs-toc" aria-label={t.onThisPage}>
-        <span className="label">{t.onThisPage}</span>
-        {toc.map((x) => (
-          <a key={x.id} href={`#${x.id}`}>{x.label}</a>
-        ))}
-      </nav>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { DocsLayout, Note, Terminal } from "@/components/ui";
 import { dict, href, type Lang } from "@/lib/i18n";
 
-const TOC_IDS = ["profile", "contact", "message", "cli", "devices"];
+const TOC_IDS = ["profile", "contact", "message", "transports", "cli", "devices"];
 
 export function Docs({ lang }: { lang: Lang }) {
   const t = dict[lang].docs;
@@ -40,13 +40,27 @@ export function Docs({ lang }: { lang: Lang }) {
           <p>{t.message[1]}</p>
         </section>
 
+        <section id="transports" className="doc-step">
+          <h2 className="h3">{t.transports[0]}</h2>
+          {t.transports.slice(1).map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </section>
+
         <section id="cli" className="doc-step">
           <h2 className="h3">{t.cliTitle}</h2>
+          <p>{t.cli.intro}</p>
           <p>
-            <code>shum init</code> {t.cli[0]} <code>shum</code> {t.cli[1]} <code>shum chats</code> {t.cli[2]}
+            {t.cli.before} <Link href={href(lang, "/downloads/#cli")} className="inline-link">{t.cli.link}</Link>
+            {t.cli.after}
           </p>
+          <ul className="steps">
+            <li><code>shum init</code> {t.cli.steps[0]}</li>
+            <li><code>shum</code> {t.cli.steps[1]}</li>
+            <li><code>shum chats</code> {t.cli.steps[2]}</li>
+          </ul>
         </section>
-        <Terminal lang={lang} lines={["shum init", "shum", "shum chats"]} />
+        <Terminal lang={lang} lines={t.cli.lines} />
 
         <div id="devices">
           <Note title={t.devices[0]}>{t.devices[1]}</Note>

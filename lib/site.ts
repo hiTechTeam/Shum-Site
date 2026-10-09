@@ -12,11 +12,15 @@ export const repos = [
   { name: "Shum-Protocol", href: `${github}/Shum-Protocol` },
 ] as const;
 
+/** Each repository has README.md in English and README.ru.md in Russian. */
+export const readmeUrl = (repoHref: string, lang: "ru" | "en") =>
+  lang === "ru" ? `${repoHref}/blob/main/README.ru.md` : repoHref;
+
 export const specUrl = (file: string) => `${github}/Shum-Protocol/blob/main/spec/${file}`;
 
-// Shum-CLI has not published install.sh yet. Flip this once it is released,
-// and the curl card appears on the downloads page.
-export const INSTALL_SCRIPT_READY = false;
+// install.sh shipped with Shum-CLI 0.1.6. Set to false to hide the curl card
+// if the script is ever pulled.
+export const INSTALL_SCRIPT_READY = true;
 
 export const installScript = "https://raw.githubusercontent.com/hiTechTeam/Shum-CLI/main/install.sh";
 export const installScriptSource = `${github}/Shum-CLI/blob/main/install.sh`;

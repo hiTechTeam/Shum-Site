@@ -66,7 +66,7 @@ export function Downloads({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      <section className="section-tight">
+      <section id="cli" className="section-tight">
         <div className="container stack-24">
           <BlockHead title={t.cli[0]} text={t.cli[1]} />
           <div className={INSTALL_SCRIPT_READY ? "grid-2" : "grid-1"}>
