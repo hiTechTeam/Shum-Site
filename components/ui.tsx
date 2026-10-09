@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { CopyButton } from "./CopyCommand";
-import { Arrow } from "./pixel";
+import { CopyButton, type CopyLabels } from "./CopyCommand";
+import { dict, href, type Lang } from "@/lib/i18n";
 
 export function PageHeader({ eyebrow, title, lead }: { eyebrow: string; title: string; lead: string }) {
   return (
@@ -15,8 +15,8 @@ export function PageHeader({ eyebrow, title, lead }: { eyebrow: string; title: s
   );
 }
 
-export function Badge({ children, ready = false }: { children: ReactNode; ready?: boolean }) {
-  return <span className={ready ? "badge is-ready" : "badge"}>{children}</span>;
+export function Badge({ children }: { children: ReactNode }) {
+  return <span className="badge">{children}</span>;
 }
 
 export function BlockHead({ title, text }: { title: string; text: string }) {
@@ -33,26 +33,27 @@ export function Install({
   tool,
   command,
   note,
-  wide = false,
+  lang,
 }: {
   system: string;
   tool: string;
   command?: string;
   note: ReactNode;
-  wide?: boolean;
+  lang: Lang;
 }) {
+  const c = dict[lang].common;
   return (
-    <div className={wide ? "install is-wide" : "install"}>
+    <div className="install">
       <span className="label">{system}</span>
       <h3 className="h3">{tool}</h3>
       <div className="command">
         {command ? (
           <>
             <code>{command}</code>
-            <CopyButton text={command} />
+            <CopyButton text={command} labels={c as CopyLabels} />
           </>
         ) : (
-          <code className="pending">Пакет готовится</code>
+          <code className="pending">{c.pending}</code>
         )}
       </div>
       <p className="note-sm">{note}</p>
@@ -60,65 +61,54 @@ export function Install({
   );
 }
 
-export function ExternalLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a href={href} target="_blank" rel="noreferrer">
-      {children} <Arrow />
-    </a>
-  );
-}
-
-type DocLink = { href: string; label: string };
-
-const guide: DocLink[] = [
-  { href: "/docs/", label: "Начало работы" },
-  { href: "/downloads/", label: "Приложения и версии" },
-  { href: "/docs/#contact", label: "Профиль и контакты" },
-  { href: "/docs/#message", label: "Bluetooth и релеи" },
-];
-const technical: DocLink[] = [
-  { href: "/protocol/", label: "Открытый протокол" },
-  { href: "/security/", label: "Безопасность" },
-  { href: "/protocol/#stable", label: "Первая стабильная версия" },
-];
-
-/** Documentation layout: section menu, article, table of contents. */
+/**
+ * Documentation layout: section menu, article, table of contents.
+ * Links that point at a part of a page are plain anchors: the router does not
+ * scroll for a hash on the page that is already open.
+ */
 export function DocsLayout({
+  lang,
   current,
   toc,
   children,
 }: {
+  lang: Lang;
   current: string;
-  toc: { id: string; label: string; group?: string }[];
+  toc: { id: string; label: string }[];
   children: ReactNode;
 }) {
-  const item = (l: DocLink) => (
-    <Link key={l.label} href={l.href} className={l.href === current ? "is-active" : undefined}>
-      {l.label}
-    </Link>
-  );
+  const t = dict[lang].docsMenu;
+  const guide = ["/docs/", "/downloads/", "/docs/#contact", "/docs/#message"];
+  const technical = ["/protocol/", "/security/", "/protocol/#stable"];
+  const item = (path: string, label: string) => {
+    const to = href(lang, path);
+    const isActive = path === current;
+    return path.includes("#") ? (
+      <a key={path} href={to}>{label}</a>
+    ) : (
+      <Link key={path} href={to} className={isActive ? "is-active" : undefined} aria-current={isActive ? "page" : undefined}>
+        {label}
+      </Link>
+    );
+  };
   return (
     <div className="container docs">
-      <aside className="docs-menu" aria-label="Разделы документации">
+      <aside className="docs-menu" aria-label={t.menuLabel}>
         <div className="docs-group">
-          <span className="label">Руководство</span>
-          {guide.map(item)}
+          <span className="label">{t.guide}</span>
+          {guide.map((p, i) => item(p, t.guideLinks[i]))}
         </div>
         <div className="docs-group">
-          <span className="label">Технический раздел</span>
-          {technical.map(item)}
+          <span className="label">{t.technical}</span>
+          {technical.map((p, i) => item(p, t.technicalLinks[i]))}
         </div>
       </aside>
       <article className="docs-article">{children}</article>
-      <nav className="docs-toc" aria-label="На этой странице">
-        <span className="label">На этой странице</span>
-        {toc.map((t) =>
-          t.group ? (
-            <span key={t.group} className="label toc-group">{t.group}</span>
-          ) : (
-            <a key={t.id} href={`#${t.id}`}>{t.label}</a>
-          ),
-        )}
+      <nav className="docs-toc" aria-label={t.onThisPage}>
+        <span className="label">{t.onThisPage}</span>
+        {toc.map((x) => (
+          <a key={x.id} href={`#${x.id}`}>{x.label}</a>
+        ))}
       </nav>
     </div>
   );
@@ -133,12 +123,12 @@ export function Note({ title, children }: { title: string; children: ReactNode }
   );
 }
 
-export function Terminal({ lines }: { lines: string[] }) {
+export function Terminal({ lines, lang }: { lines: string[]; lang: Lang }) {
   return (
     <div className="terminal">
       <div className="terminal-head">
         <span className="label">Terminal</span>
-        <CopyButton text={lines.join("\n")} withLabel />
+        <CopyButton text={lines.join("\n")} labels={dict[lang].common as CopyLabels} withLabel />
       </div>
       <pre>{lines.join("\n")}</pre>
     </div>

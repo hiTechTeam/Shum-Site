@@ -1,10 +1,5 @@
-export const sections = [
-  { href: "/", label: "Обзор" },
-  { href: "/downloads/", label: "Загрузки" },
-  { href: "/docs/", label: "Документация" },
-  { href: "/protocol/", label: "Протокол" },
-  { href: "/security/", label: "Безопасность" },
-] as const;
+// The protocol lives inside the documentation, so it has no item of its own.
+export const sectionPaths = ["/", "/downloads/", "/docs/", "/security/"] as const;
 
 const github = "https://github.com/hiTechTeam";
 
@@ -15,5 +10,7 @@ export const repos = [
   { name: "Shum-Protocol", href: `${github}/Shum-Protocol` },
 ] as const;
 
-export const specUrl = (file: string) =>
-  `${github}/Shum-Protocol/blob/main/spec/${file}`;
+export const specUrl = (file: string) => `${github}/Shum-Protocol/blob/main/spec/${file}`;
+
+export const installScript = "https://raw.githubusercontent.com/hiTechTeam/Shum-CLI/main/install.sh";
+export const installScriptSource = `${github}/Shum-CLI/blob/main/install.sh`;

@@ -1,31 +1,34 @@
 import Link from "next/link";
 import { Arrow, Logo } from "./pixel";
+import { dict, href, type Lang } from "@/lib/i18n";
 import { repos } from "@/lib/site";
 
-export function Footer() {
+export function Footer({ lang }: { lang: Lang }) {
+  const t = dict[lang].footer;
+  const to = (p: string) => href(lang, p);
   return (
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-about">
-          <Link href="/" className="brand">
+          <Link href={to("/")} className="brand">
             <Logo />
             <span>Shum</span>
           </Link>
           <p>
-            Децентрализованный мессенджер.
+            {t.tagline[0]}
             <br />
-            Ключи остаются у вас.
+            {t.tagline[1]}
           </p>
         </div>
         <div className="footer-col">
-          <h2>Продукт</h2>
-          <Link href="/downloads/">Загрузки</Link>
-          <Link href="/docs/">Начало работы</Link>
+          <h2>{t.product}</h2>
+          <Link href={to("/downloads/")}>{t.downloads}</Link>
+          <Link href={to("/docs/")}>{t.start}</Link>
         </div>
         <div className="footer-col">
-          <h2>Разработчикам</h2>
-          <Link href="/protocol/">Открытый протокол</Link>
-          <Link href="/docs/">Документация</Link>
+          <h2>{t.developers}</h2>
+          <Link href={to("/protocol/")}>{t.protocol}</Link>
+          <Link href={to("/docs/")}>{t.docs}</Link>
           {repos.map((r) => (
             <a key={r.name} href={r.href} className="repo">
               {r.name} <Arrow />
@@ -33,14 +36,14 @@ export function Footer() {
           ))}
         </div>
         <div className="footer-col">
-          <h2>О Shum</h2>
-          <Link href="/security/">Безопасность</Link>
-          <Link href="/security/">Модель приватности</Link>
+          <h2>{t.about}</h2>
+          <Link href={to("/security/")}>{t.security}</Link>
+          <Link href={to("/security/")}>{t.privacy}</Link>
         </div>
       </div>
       <div className="container footer-bottom">
         <span>Shum, 2026</span>
-        <span>Без номера телефона. С открытым протоколом.</span>
+        <span>{t.bottom}</span>
       </div>
     </footer>
   );

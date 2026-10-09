@@ -10,8 +10,10 @@ function CopyIcon() {
   );
 }
 
-/** Copies a command; shows «Скопировано» for a moment, as in the prototype. */
-export function CopyButton({ text, withLabel = false }: { text: string; withLabel?: boolean }) {
+export type CopyLabels = { copy: string; copied: string; copyLabel: string };
+
+/** Copies a command and briefly confirms it. */
+export function CopyButton({ text, labels, withLabel = false }: { text: string; labels: CopyLabels; withLabel?: boolean }) {
   const [done, setDone] = useState(false);
   const copy = async () => {
     try {
@@ -23,10 +25,10 @@ export function CopyButton({ text, withLabel = false }: { text: string; withLabe
     }
   };
   return (
-    <button type="button" className={withLabel ? "copy copy-text" : "copy"} onClick={copy} aria-label="Копировать команду">
+    <button type="button" className={withLabel ? "copy copy-text" : "copy"} onClick={copy} aria-label={labels.copyLabel}>
       <CopyIcon />
-      {withLabel && <span>{done ? "Скопировано" : "Копировать"}</span>}
-      {!withLabel && done && <span className="copy-done" role="status">Скопировано</span>}
+      {withLabel && <span>{done ? labels.copied : labels.copy}</span>}
+      {!withLabel && done && <span className="copy-done" role="status">{labels.copied}</span>}
     </button>
   );
 }

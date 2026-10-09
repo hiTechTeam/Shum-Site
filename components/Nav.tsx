@@ -4,38 +4,51 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "./pixel";
-import { sections } from "@/lib/site";
+import { ThemeToggle } from "./ThemeToggle";
+import { dict, href, switchPath, type Lang } from "@/lib/i18n";
+import { sectionPaths } from "@/lib/site";
 
-export function Nav() {
-  const path = usePathname();
+export function Nav({ lang }: { lang: Lang }) {
+  const t = dict[lang].nav;
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const active = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+  // Path without the language prefix, so both versions share one check.
+  const path = lang === "en" ? pathname.replace(/^\/en/, "") || "/" : pathname;
+  const active = (p: string) =>
+    p === "/" ? path === "/" : p === "/docs/" ? /^\/(docs|protocol)\//.test(path) : path.startsWith(p);
+
+  const links = sectionPaths.map((p, i) => (
+    <Link
+      key={p}
+      href={href(lang, p)}
+      className={active(p) ? "is-active" : undefined}
+      aria-current={active(p) ? "page" : undefined}
+      onClick={() => setOpen(false)}
+    >
+      {t.sections[i]}
+    </Link>
+  ));
 
   return (
     <header className="nav">
-      <Link href="/" className="brand" aria-label="Shum, на главную">
+      <Link href={href(lang, "/")} className="brand" aria-label={t.home}>
         <Logo />
         <span>Shum</span>
       </Link>
-      <nav className="nav-links" aria-label="Разделы">
-        {sections.map((s) => (
-          <Link key={s.href} href={s.href} className={active(s.href) ? "is-active" : undefined}>
-            {s.label}
-          </Link>
-        ))}
-      </nav>
-      <span className="locale" title="Английская версия появится позже">EN</span>
-      <button className="menu-toggle" aria-expanded={open} onClick={() => setOpen(!open)}>
-        Меню <span aria-hidden>{open ? "×" : "☰"}</span>
-      </button>
+      <nav className="nav-links" aria-label={t.siteSections}>{links}</nav>
+      <div className="nav-tools">
+        <ThemeToggle labels={t.theme} />
+        <Link href={switchPath(lang, pathname)} className="locale" hrefLang={lang === "ru" ? "en" : "ru"} aria-label={t.otherLabel}>
+          {t.other}
+        </Link>
+        <button className="menu-toggle" aria-expanded={open} onClick={() => setOpen(!open)}>
+          {t.menu} <span aria-hidden>{open ? "×" : "☰"}</span>
+        </button>
+      </div>
       {open && (
-        <nav className="menu" aria-label="Разделы сайта">
-          <span className="label">Разделы сайта</span>
-          {sections.map((s) => (
-            <Link key={s.href} href={s.href} onClick={() => setOpen(false)} className={active(s.href) ? "is-active" : undefined}>
-              {s.label}
-            </Link>
-          ))}
+        <nav className="menu" aria-label={t.siteSections}>
+          <span className="label">{t.siteSections}</span>
+          {links}
         </nav>
       )}
     </header>
