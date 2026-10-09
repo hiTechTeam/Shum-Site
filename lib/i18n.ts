@@ -122,8 +122,6 @@ const ru = {
   docsMenu: {
     guide: "Руководство",
     technical: "Технический раздел",
-    guideLinks: ["Начало работы", "Приложения и версии", "Профиль и контакты", "Bluetooth и релеи"],
-    technicalLinks: ["Открытый протокол", "Безопасность", "Первая стабильная версия"],
     onThisPage: "На этой странице",
     menuLabel: "Разделы документации",
   },
@@ -371,8 +369,6 @@ const en: Dict = {
   docsMenu: {
     guide: "Guide",
     technical: "Technical",
-    guideLinks: ["Getting started", "Apps and versions", "Profile and contacts", "Bluetooth and relays"],
-    technicalLinks: ["Open protocol", "Security", "First stable version"],
     onThisPage: "On this page",
     menuLabel: "Documentation sections",
   },

@@ -245,12 +245,10 @@ img { image-rendering: pixelated; }
 .docs-menu { grid-area: menu; }
 .docs-article { grid-area: article; }
 .docs-toc { grid-area: toc; }
-.docs-menu { display: grid; gap: 24px; position: sticky; top: 24px; }
-.docs-group { display: grid; gap: 4px; }
-.docs-group .label { margin-bottom: 8px; }
-.docs-group a { padding: 10px 12px; font-size: 14px; color: var(--muted); }
-.docs-group a:hover { color: var(--text); }
-.docs-group a.is-active { background: var(--hero); color: var(--text); font-weight: 600; }
+.docs-menu { display: grid; gap: 4px; position: sticky; top: 24px; }
+.docs-menu a { padding: 10px 12px; font-size: 14px; color: var(--muted); }
+.docs-menu a:hover { color: var(--text); }
+.docs-menu a.is-active { background: var(--hero); color: var(--text); font-weight: 600; }
 .docs-article { display: grid; gap: 32px; min-width: 0; }
 .docs-article p { color: var(--muted); }
 .docs-article code { font: 400 14px var(--mono); color: var(--text); }
@@ -329,8 +327,11 @@ img { image-rendering: pixelated; }
   .platform, .install { padding: 24px; }
   .link-row { grid-template-columns: 1fr 24px; gap: 8px 16px; }
   .link-row span { grid-column: 1; }
-  .docs { grid-template-columns: 1fr; grid-template-areas: "article"; }
-  .docs-menu, .docs-toc { display: none; }
+  .docs { grid-template-columns: 1fr; grid-template-areas: "menu" "article"; gap: 24px; }
+  /* Two pages fit as tabs above the article; the table of contents hides. */
+  .docs-menu { position: static; display: flex; gap: 8px; }
+  .docs-menu a { flex: 1; text-align: center; border: 1px solid var(--line); }
+  .docs-toc { display: none; }
   .concepts div { grid-template-columns: 1fr; gap: 4px; }
   .data-table thead { display: none; }
   .data-table td { display: block; width: auto !important; padding: 4px 0; border: 0; }

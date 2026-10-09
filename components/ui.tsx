@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { CopyButton, type CopyLabels } from "./CopyCommand";
 import { dict, href, type Lang } from "@/lib/i18n";
 import { BandNoise } from "./pixel";
-import { DocsNav, type MenuGroup } from "./DocsNav";
+import { DocsNav, type MenuItem } from "./DocsNav";
 
 export function PageHeader({ eyebrow, title, lead }: { eyebrow: string; title: string; lead: string }) {
   return (
@@ -76,29 +76,13 @@ export function DocsLayout({
   children: ReactNode;
 }) {
   const t = dict[lang].docsMenu;
-  const to = (p: string) => href(lang, p);
-  const groups: MenuGroup[] = [
-    {
-      title: t.guide,
-      items: [
-        { href: to("/docs/"), label: t.guideLinks[0], page: current === "/docs/" },
-        { href: to("/downloads/"), label: t.guideLinks[1] },
-        { href: to("/docs/#profile"), label: t.guideLinks[2], sections: ["profile", "contact"] },
-        { href: to("/docs/#transports"), label: t.guideLinks[3], sections: ["transports"] },
-      ],
-    },
-    {
-      title: t.technical,
-      items: [
-        { href: to("/protocol/"), label: t.technicalLinks[0], page: current === "/protocol/" },
-        { href: to("/security/"), label: t.technicalLinks[1] },
-        { href: to("/protocol/#stable"), label: t.technicalLinks[2], sections: ["stable"] },
-      ],
-    },
+  const pages: MenuItem[] = [
+    { href: href(lang, "/docs/"), label: t.guide, active: current === "/docs/" },
+    { href: href(lang, "/protocol/"), label: t.technical, active: current === "/protocol/" },
   ];
   return (
     <div className="container docs">
-      <DocsNav groups={groups} toc={toc} menuLabel={t.menuLabel} tocLabel={t.onThisPage} />
+      <DocsNav pages={pages} toc={toc} menuLabel={t.menuLabel} tocLabel={t.onThisPage} />
       <article className="docs-article">{children}</article>
     </div>
   );
