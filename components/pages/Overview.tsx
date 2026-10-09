@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Arrow, HeroNoise, PixelStep } from "@/components/pixel";
+import { Arrow, BandNoise, HeroNoise, PixelStep } from "@/components/pixel";
 import { dict, href, type Lang } from "@/lib/i18n";
 
 // CLI for macOS is the only client people can try today.
@@ -106,6 +106,7 @@ export function Overview({ lang }: { lang: Lang }) {
       <PixelStep from="var(--panel)" to="var(--hero)" />
 
       <section className="section trust">
+        <BandNoise variant={1} />
         <div className="container">
           <div className="intro">
             <span className="label">{t.trustLabel}</span>

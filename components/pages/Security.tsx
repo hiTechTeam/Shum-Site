@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Arrow, PixelStep } from "@/components/pixel";
+import { Arrow, BandNoise, PixelStep } from "@/components/pixel";
 import { PageHeader } from "@/components/ui";
 import { dict, href, type Lang } from "@/lib/i18n";
 
@@ -71,6 +71,7 @@ export function Security({ lang }: { lang: Lang }) {
       <PixelStep from="var(--bg)" to="var(--hero)" />
 
       <section className="section trust">
+        <BandNoise variant={2} />
         <div className="container stack-24 single">
           <h2 className="h2">{t.techTitle}</h2>
           <p className="lead">{t.techText}</p>

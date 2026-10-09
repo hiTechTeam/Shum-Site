@@ -42,7 +42,12 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>Shum, 2026</span>
+        <span>
+          Shum, 2026. {t.author}{" "}
+          <a href="https://github.com/r66cha" className="author" rel="author">
+            Ruslan Chukavin <Arrow />
+          </a>
+        </span>
         <span>{t.bottom}</span>
       </div>
     </footer>

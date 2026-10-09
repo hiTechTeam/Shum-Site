@@ -2,10 +2,12 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { CopyButton, type CopyLabels } from "./CopyCommand";
 import { dict, href, type Lang } from "@/lib/i18n";
+import { BandNoise } from "./pixel";
 
 export function PageHeader({ eyebrow, title, lead }: { eyebrow: string; title: string; lead: string }) {
   return (
     <section className="page-head">
+      <BandNoise variant={0} />
       <div className="container">
         <span className="label">{eyebrow}</span>
         <h1 className="h1">{title}</h1>

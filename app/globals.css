@@ -93,9 +93,11 @@ img { image-rendering: pixelated; }
   background-size: 16px 8px;
   background-repeat: repeat-x;
 }
-.noise { position: absolute; fill: var(--accent); pointer-events: none; }
-.noise-corner { top: 0; right: 0; }
-.noise-edge { left: 0; bottom: 0; width: 100%; }
+.noise { position: absolute; inset: 0; pointer-events: none; image-rendering: pixelated; }
+.page-head, .trust { position: relative; overflow: hidden; }
+.page-head > .container, .trust > .container { position: relative; }
+.footer-bottom .author { color: var(--text); }
+.footer-bottom .author:hover { color: var(--accent-text); }
 
 /* Buttons: sharp corners and a hard pixel shadow */
 .btn {
@@ -308,8 +310,6 @@ img { image-rendering: pixelated; }
   .h2 { font-size: 30px; line-height: 36px; }
   .hero-main, .facts, .cards, .trust .container, .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   .route { padding: 20px; }
-  /* Keep the noise to a thin band above the text, as in the 390 px mock. */
-  .noise-corner { clip-path: inset(0 0 calc(100% - 72px) 0); }
   .actions { flex-direction: column; align-items: flex-start; }
   .head-row { flex-direction: column; }
   .clients td { display: block; width: auto !important; padding: 4px 0; border: 0; }
