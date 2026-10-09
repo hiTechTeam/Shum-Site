@@ -25,7 +25,7 @@ The design comes from the Figma page “Сайт · Shum”. Fonts are served lo
 
 ## Downloads and documentation
 
-[CLI 0.1.6](https://github.com/hiTechTeam/Shum-CLI/releases/tag/v0.1.6) and its installer script are published. Download commands should link to real packages; platforms still in development should be labeled accordingly.
+[CLI 0.1.7](https://github.com/hiTechTeam/Shum-CLI/releases/tag/v0.1.7) and its installer script are published. Download commands should link to real packages; platforms still in development should be labeled accordingly.
 
 The protocol specification is currently in Russian. English protocol pages should make that clear.
 
