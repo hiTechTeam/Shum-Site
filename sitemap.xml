@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://getshum.tech/</loc>
+<xhtml:link rel="alternate" hreflang="ru" href="https://getshum.tech/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://getshum.tech/en/" />
+</url>
+<url>
+<loc>https://getshum.tech/downloads/</loc>
+<xhtml:link rel="alternate" hreflang="ru" href="https://getshum.tech/downloads/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://getshum.tech/en/downloads/" />
+</url>
+<url>
+<loc>https://getshum.tech/docs/</loc>
+<xhtml:link rel="alternate" hreflang="ru" href="https://getshum.tech/docs/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://getshum.tech/en/docs/" />
+</url>
+<url>
+<loc>https://getshum.tech/protocol/</loc>
+<xhtml:link rel="alternate" hreflang="ru" href="https://getshum.tech/protocol/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://getshum.tech/en/protocol/" />
+</url>
+<url>
+<loc>https://getshum.tech/security/</loc>
+<xhtml:link rel="alternate" hreflang="ru" href="https://getshum.tech/security/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://getshum.tech/en/security/" />
+</url>
+</urlset>

@@ -1,0 +1,73 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/0umf92h1sb77c.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+9:"/_next/static/chunks/02u5izegod7o0.js"
+a:I[62474,["$9"],"themeScript"]
+b:I[42724,["$9"],"Nav"]
+c:"/_next/static/chunks/01_8xgif0um54.js"
+d:I[22016,["$9","$c"],""]
+:HL["/_next/static/chunks/1f74h-o9d_k8p.css","style"]
+6:X
+6:C
+7:X
+8:[["children",{"s":"(ru)","h":48,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1f74h-o9d_k8p.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/02u5izegod7o0.js","async":true}]],["$","html",null,{"lang":"ru","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}]}],["$","body",null,{"children":[["$","$Lb",null,{"lang":"ru"}],["$","main",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]]}]}],["$","footer",null,{"className":"footer","children":[["$","div",null,{"className":"container footer-grid","children":[["$","div",null,{"className":"footer-about","children":[["$","$Ld",null,{"href":"/","className":"brand","children":[["$","svg",null,{"className":"logo-cloud","viewBox":"0 0 12 11","height":27,"width":29.454545454545453,"shapeRendering":"crispEdges","aria-hidden":true,"children":[null,null,["$","rect","2-0",{"x":2,"y":0,"width":"1","height":"1"}],["$","rect","3-0",{"x":3,"y":0,"width":"1","height":"1"}],["$","rect","4-0",{"x":4,"y":0,"width":"1","height":"1"}],["$","rect","5-0",{"x":5,"y":0,"width":"1","height":"1"}],["$","rect","6-0",{"x":6,"y":0,"width":"1","height":"1"}],["$","rect","7-0",{"x":7,"y":0,"width":"1","height":"1"}],["$","rect","8-0",{"x":8,"y":0,"width":"1","height":"1"}],["$","rect","9-0",{"x":9,"y":0,"width":"1","height":"1"}],null,null,null,["$","rect","1-1",{"x":1,"y":1,"width":"1","height":"1"}],["$","rect","2-1",{"x":2,"y":1,"width":"1","height":"1"}],["$","rect","3-1",{"x":3,"y":1,"width":"1","height":"1"}],["$","rect","4-1",{"x":4,"y":1,"width":"1","height":"1"}],["$","rect","5-1",{"x":5,"y":1,"width":"1","height":"1"}],["$","rect","6-1",{"x":6,"y":1,"width":"1","height":"1"}],["$","rect","7-1",{"x":7,"y":1,"width":"1","height":"1"}],["$","rect","8-1",{"x":8,"y":1,"width":"1","height":"1"}],["$","rect","9-1",{"x":9,"y":1,"width":"1","height":"1"}],["$","rect","10-1",{"x":10,"y":1,"width":"1","height":"1"}],null,["$","rect","0-2",{"x":0,"y":2,"width":"1","height":"1"}],["$","rect","1-2",{"x":1,"y":2,"width":"1","height":"1"}],["$","rect","2-2",{"x":2,"y":2,"width":"1","height":"1"}],["$","rect","3-2",{"x":3,"y":2,"width":"1","height":"1"}],["$","rect","4-2",{"x":4,"y":2,"width":"1","height":"1"}],["$","rect","5-2",{"x":5,"y":2,"width":"1","height":"1"}],["$","rect","6-2",{"x":6,"y":2,"width":"1","height":"1"}],["$","rect","7-2",{"x":7,"y":2,"width":"1","height":"1"}],["$","rect","8-2",{"x":8,"y":2,"width":"1","height":"1"}],["$","rect","9-2",{"x":9,"y":2,"width":"1","height":"1"}],["$","rect","10-2",{"x":10,"y":2,"width":"1","height":"1"}],["$","rect","11-2",{"x":11,"y":2,"width":"1","height":"1"}],["$","rect","0-3",{"x":0,"y":3,"width":"1","height":"1"}],["$","rect","1-3",{"x":1,"y":3,"width":"1","height":"1"}],["$","rect","2-3",{"x":2,"y":3,"width":"1","height":"1"}],["$","rect","3-3",{"x":3,"y":3,"width":"1","height":"1"}],["$","rect","4-3",{"x":4,"y":3,"width":"1","height":"1"}],["$","rect","5-3",{"x":5,"y":3,"width":"1","height":"1"}],["$","rect","6-3",{"x":6,"y":3,"width":"1","height":"1"}],["$","rect","7-3",{"x":7,"y":3,"width":"1","height":"1"}],["$","rect","8-3",{"x":8,"y":3,"width":"1","height":"1"}],["$","rect","9-3",{"x":9,"y":3,"width":"1","height":"1"}],["$","rect","10-3",{"x":10,"y":3,"width":"1","height":"1"}],["$","rect","11-3",{"x":11,"y":3,"width":"1","height":"1"}],["$","rect","0-4",{"x":0,"y":4,"width":"1","height":"1"}],["$","rect","1-4",{"x":1,"y":4,"width":"1","height":"1"}],"$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23",null,"$L24","$L25","$L26","$L27","$L28","$L29","$L2a","$L2b","$L2c","$L2d",null,null,null,"$L2e","$L2f","$L30","$L31","$L32","$L33","$L34","$L35",null,null,null,null,"$L36","$L37","$L38",null,null,null,null,null,null,null,null,null,"$L39","$L3a",null,null,null,null,null,null,null,null,null,null,"$L3b",null,null,null,null,null,null,null,null,null]}],"$L3c"]}],"$L3d"]}],"$L3e","$L3f","$L40"]}],"$L41"]}]]}]]}]]}],"p":"$@42","v":null,"s":"$7"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}},"a":"$@43","u":"$@44","b":"nNHWOQk-MOCvWBti-tvnv"}
+e:["$","rect","2-4",{"x":2,"y":4,"width":"1","height":"1"}]
+f:["$","rect","3-4",{"x":3,"y":4,"width":"1","height":"1"}]
+10:["$","rect","4-4",{"x":4,"y":4,"width":"1","height":"1"}]
+11:["$","rect","5-4",{"x":5,"y":4,"width":"1","height":"1"}]
+12:["$","rect","6-4",{"x":6,"y":4,"width":"1","height":"1"}]
+13:["$","rect","7-4",{"x":7,"y":4,"width":"1","height":"1"}]
+14:["$","rect","8-4",{"x":8,"y":4,"width":"1","height":"1"}]
+15:["$","rect","9-4",{"x":9,"y":4,"width":"1","height":"1"}]
+16:["$","rect","10-4",{"x":10,"y":4,"width":"1","height":"1"}]
+17:["$","rect","11-4",{"x":11,"y":4,"width":"1","height":"1"}]
+18:["$","rect","0-5",{"x":0,"y":5,"width":"1","height":"1"}]
+19:["$","rect","1-5",{"x":1,"y":5,"width":"1","height":"1"}]
+1a:["$","rect","2-5",{"x":2,"y":5,"width":"1","height":"1"}]
+1b:["$","rect","3-5",{"x":3,"y":5,"width":"1","height":"1"}]
+1c:["$","rect","4-5",{"x":4,"y":5,"width":"1","height":"1"}]
+1d:["$","rect","5-5",{"x":5,"y":5,"width":"1","height":"1"}]
+1e:["$","rect","6-5",{"x":6,"y":5,"width":"1","height":"1"}]
+1f:["$","rect","7-5",{"x":7,"y":5,"width":"1","height":"1"}]
+20:["$","rect","8-5",{"x":8,"y":5,"width":"1","height":"1"}]
+21:["$","rect","9-5",{"x":9,"y":5,"width":"1","height":"1"}]
+22:["$","rect","10-5",{"x":10,"y":5,"width":"1","height":"1"}]
+23:["$","rect","11-5",{"x":11,"y":5,"width":"1","height":"1"}]
+24:["$","rect","1-6",{"x":1,"y":6,"width":"1","height":"1"}]
+25:["$","rect","2-6",{"x":2,"y":6,"width":"1","height":"1"}]
+26:["$","rect","3-6",{"x":3,"y":6,"width":"1","height":"1"}]
+27:["$","rect","4-6",{"x":4,"y":6,"width":"1","height":"1"}]
+28:["$","rect","5-6",{"x":5,"y":6,"width":"1","height":"1"}]
+29:["$","rect","6-6",{"x":6,"y":6,"width":"1","height":"1"}]
+2a:["$","rect","7-6",{"x":7,"y":6,"width":"1","height":"1"}]
+2b:["$","rect","8-6",{"x":8,"y":6,"width":"1","height":"1"}]
+2c:["$","rect","9-6",{"x":9,"y":6,"width":"1","height":"1"}]
+2d:["$","rect","10-6",{"x":10,"y":6,"width":"1","height":"1"}]
+2e:["$","rect","2-7",{"x":2,"y":7,"width":"1","height":"1"}]
+2f:["$","rect","3-7",{"x":3,"y":7,"width":"1","height":"1"}]
+30:["$","rect","4-7",{"x":4,"y":7,"width":"1","height":"1"}]
+31:["$","rect","5-7",{"x":5,"y":7,"width":"1","height":"1"}]
+32:["$","rect","6-7",{"x":6,"y":7,"width":"1","height":"1"}]
+33:["$","rect","7-7",{"x":7,"y":7,"width":"1","height":"1"}]
+34:["$","rect","8-7",{"x":8,"y":7,"width":"1","height":"1"}]
+35:["$","rect","9-7",{"x":9,"y":7,"width":"1","height":"1"}]
+36:["$","rect","2-8",{"x":2,"y":8,"width":"1","height":"1"}]
+37:["$","rect","3-8",{"x":3,"y":8,"width":"1","height":"1"}]
+38:["$","rect","4-8",{"x":4,"y":8,"width":"1","height":"1"}]
+39:["$","rect","2-9",{"x":2,"y":9,"width":"1","height":"1"}]
+3a:["$","rect","3-9",{"x":3,"y":9,"width":"1","height":"1"}]
+3b:["$","rect","2-10",{"x":2,"y":10,"width":"1","height":"1"}]
+3c:["$","span",null,{"children":"Shum"}]
+3d:["$","p",null,{"children":"Децентрализованный мессенджер."}]
+3e:["$","div",null,{"className":"footer-col","children":[["$","h2",null,{"children":"Продукт"}],["$","$Ld",null,{"href":"/downloads/","children":"Загрузки"}],["$","$Ld",null,{"href":"/docs/","children":"Начало работы"}]]}]
+3f:["$","div",null,{"className":"footer-col","children":[["$","h2",null,{"children":"Разработчикам"}],["$","$Ld",null,{"href":"/protocol/","children":"Открытый протокол"}],["$","$Ld",null,{"href":"/docs/","children":"Документация"}],[["$","a","Shum-iOS",{"href":"https://github.com/hiTechTeam/Shum-iOS/blob/main/README.ru.md","className":"repo","children":["Shum-iOS"," ",["$","span",null,{"className":"arrow","aria-hidden":true,"children":"↗"}]]}],["$","a","Shum-CLI",{"href":"https://github.com/hiTechTeam/Shum-CLI/blob/main/README.ru.md","className":"repo","children":["Shum-CLI"," ",["$","span",null,{"className":"arrow","aria-hidden":true,"children":"↗"}]]}],["$","a","Shum-Core",{"href":"https://github.com/hiTechTeam/Shum-Core/blob/main/README.ru.md","className":"repo","children":["Shum-Core"," ",["$","span",null,{"className":"arrow","aria-hidden":true,"children":"↗"}]]}],["$","a","Shum-Protocol",{"href":"https://github.com/hiTechTeam/Shum-Protocol/blob/main/README.ru.md","className":"repo","children":["Shum-Protocol"," ",["$","span",null,{"className":"arrow","aria-hidden":true,"children":"↗"}]]}]]]}]
+40:["$","div",null,{"className":"footer-col","children":[["$","h2",null,{"children":"О Shum"}],["$","$Ld",null,{"href":"/security/","children":"Безопасность"}],["$","$Ld",null,{"href":"/security/","children":"Модель приватности"}]]}]
+41:["$","div",null,{"className":"container footer-bottom","children":[["$","span",null,{"children":["Shum, 2026. ","Автор:"," ",["$","a",null,{"href":"https://github.com/r66cha","className":"author","rel":"author","children":["Ruslan Chukavin ",["$","span",null,{"className":"arrow","aria-hidden":true,"children":"↗"}]]}]]}],["$","span",null,{"children":"Без номера телефона. С открытым протоколом."}]]}]
+7:300
+44:true
+7:C
+43:0
+5:"$undefined"
+42:"$undefined"
