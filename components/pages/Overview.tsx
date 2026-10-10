@@ -2,9 +2,8 @@ import Link from "next/link";
 import { Arrow, BandNoise, HeroNoise, PixelStep } from "@/components/pixel";
 import { dict, href, type Lang } from "@/lib/i18n";
 
-// CLI for macOS is the only client people can try today.
-const READY_INDEX = 6;
-const REVIEW_INDEX = 0;
+// Status of each row in the clients table, by position; the rest are in development.
+const STATUS: Record<number, "review" | "ready" | "experimental"> = { 0: "review", 6: "ready", 7: "experimental" };
 const CARD_PATHS = ["/downloads/", "/docs/", "/protocol/"];
 
 export function Overview({ lang }: { lang: Lang }) {
@@ -93,9 +92,11 @@ export function Overview({ lang }: { lang: Lang }) {
                 <tr key={name}>
                   <td>{name}</td>
                   <td>
-                    {i === READY_INDEX ? (
+                    {STATUS[i] === "ready" ? (
                       <span className="status is-ready">{t.preview}</span>
-                    ) : i === REVIEW_INDEX ? (
+                    ) : STATUS[i] === "experimental" ? (
+                      <span className="status is-review">{t.experimental}</span>
+                    ) : STATUS[i] === "review" ? (
                       <span className="status is-review">{c.review}</span>
                     ) : (
                       <span className="status">{c.inDev}</span>

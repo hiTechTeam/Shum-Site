@@ -25,3 +25,5 @@ export const INSTALL_SCRIPT_READY = true;
 
 export const installScript = "https://raw.githubusercontent.com/hiTechTeam/Shum-CLI/main/install.sh";
 export const installScriptSource = `${github}/Shum-CLI/blob/main/install.sh`;
+export const windowsInstallScript = "https://raw.githubusercontent.com/hiTechTeam/Shum-CLI/main/install.ps1";
+export const windowsInstallScriptSource = `${github}/Shum-CLI/blob/main/install.ps1`;

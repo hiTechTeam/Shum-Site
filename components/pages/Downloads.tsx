@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Arrow, PixelStep } from "@/components/pixel";
 import { Badge, BlockHead, Install, PageHeader } from "@/components/ui";
 import { dict, href, type Lang } from "@/lib/i18n";
-import { INSTALL_SCRIPT_READY, installScript, installScriptSource } from "@/lib/site";
+import { INSTALL_SCRIPT_READY, installScript, installScriptSource, windowsInstallScript, windowsInstallScriptSource } from "@/lib/site";
 
 const BEFORE_PATHS = ["/docs/", "/docs/#message", "/security/"];
 
@@ -86,8 +86,19 @@ export function Downloads({ lang }: { lang: Lang }) {
             />
             )}
           </div>
-          <div className="grid-3">
-            <Install lang={lang} system="Windows" tool="winget" note={t.soon} />
+          <Install
+            lang={lang}
+            system="Windows"
+            tool="PowerShell"
+            command={`irm ${windowsInstallScript} | iex`}
+            note={
+              <>
+                {t.windowsNote}{" "}
+                <a href={windowsInstallScriptSource} className="inline-link">{t.viewScript} <Arrow /></a>
+              </>
+            }
+          />
+          <div className="grid-2">
             <Install lang={lang} system="Debian / Ubuntu" tool="apt" note={t.soon} />
             <Install lang={lang} system="Fedora" tool="dnf" note={t.soon} />
           </div>
