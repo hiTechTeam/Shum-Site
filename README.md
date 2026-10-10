@@ -14,7 +14,7 @@ npm run build
 
 Development: `http://localhost:3100`. Production output: `out/`, ready for static hosting. No application server required.
 
-Published at [getshum.tech](https://getshum.tech) through GitHub Pages: every push to `main` runs `.github/workflows/deploy.yml`.
+Published at [getshum.tech](https://getshum.tech) through GitHub Pages from the `gh-pages` branch. To publish the last commit, run `npm run deploy`: it builds the site locally and pushes `out/` to that branch.
 
 ## Structure
 
