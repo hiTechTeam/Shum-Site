@@ -83,8 +83,8 @@ const ru = {
       ["CLI для Windows", "CLI, через PowerShell"],
       ["CLI для Linux", "CLI"],
     ],
-    preview: "Превью 0.1.8",
-    windowsPreview: "Превью 0.1.3",
+    preview: "Превью 0.1.9",
+    windowsPreview: "Превью 0.1.4",
     trustLabel: "Безопасность",
     trustTitle: ["Понимать, кому", "вы доверяете."],
     trustText:
@@ -109,13 +109,13 @@ const ru = {
     web: ["Shum в браузере", "Веб-версия в разработке.", "Открыть веб-версию"],
     cli: [
       "CLI",
-      "Shum для тех, кто живёт в терминале: команды и полноэкранный интерфейс. Превью 0.1.8 для macOS 15 и новее и превью 0.1.3 для Windows 10 и 11.",
+      "Shum для тех, кто живёт в терминале: команды и полноэкранный интерфейс. Превью 0.1.9 для macOS 15 и новее и превью 0.1.4 для Windows 10 и 11.",
     ],
     brewNote: "macOS 15 и новее, Apple Silicon и Intel. Обновление командой brew upgrade.",
     curlNote: "Без Homebrew и без sudo. Скачивает выпуск из GitHub Releases и сверяет SHA-256.",
     viewScript: "Посмотреть скрипт",
     soon: "Появится вместе с пакетом.",
-    windowsNote: "Превью 0.1.3 для Windows 10 и 11, Intel, AMD и ARM. Shum сам определяет, есть ли на компьютере Bluetooth: без него переписка идёт через интернет. Обновление той же командой.",
+    windowsNote: "Превью 0.1.4 для Windows 10 и 11, Intel, AMD и ARM. Shum сам определяет, есть ли на компьютере Bluetooth: без него переписка идёт через интернет. Обновление той же командой.",
     beforeTitle: "Перед установкой",
     before: [
       ["Первый запуск", "Придумайте имя и выберите аватар. Ни номера, ни пароля не нужно."],
@@ -342,8 +342,8 @@ const en: Dict = {
       ["CLI for Windows", "CLI, via PowerShell"],
       ["CLI for Linux", "CLI"],
     ],
-    preview: "Preview 0.1.8",
-    windowsPreview: "Preview 0.1.3",
+    preview: "Preview 0.1.9",
+    windowsPreview: "Preview 0.1.4",
     trustLabel: "Security",
     trustTitle: ["Know who", "you trust."],
     trustText:
@@ -368,13 +368,13 @@ const en: Dict = {
     web: ["Shum in the browser", "The web version is in development.", "Open web version"],
     cli: [
       "CLI",
-      "Shum for people who live in the terminal: commands and a full-screen interface. Preview 0.1.8 for macOS 15 or later and preview 0.1.3 for Windows 10 and 11.",
+      "Shum for people who live in the terminal: commands and a full-screen interface. Preview 0.1.9 for macOS 15 or later and preview 0.1.4 for Windows 10 and 11.",
     ],
     brewNote: "macOS 15 or later, Apple Silicon and Intel. Update with brew upgrade.",
     curlNote: "No Homebrew, no sudo. Downloads the release from GitHub Releases and checks its SHA-256.",
     viewScript: "View script",
     soon: "Coming with the package.",
-    windowsNote: "Preview 0.1.3 for Windows 10 and 11, Intel, AMD and ARM. Shum detects Bluetooth on its own: without it, chats go over the internet. Run the same command to update.",
+    windowsNote: "Preview 0.1.4 for Windows 10 and 11, Intel, AMD and ARM. Shum detects Bluetooth on its own: without it, chats go over the internet. Run the same command to update.",
     beforeTitle: "Before you install",
     before: [
       ["First launch", "Pick a name and an avatar. No phone number, no password."],
