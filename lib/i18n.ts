@@ -82,7 +82,7 @@ const ru = {
       ["CLI для macOS", "CLI, через Homebrew или curl"],
       ["CLI для Linux и Windows", "CLI"],
     ],
-    preview: "Превью 0.1.7",
+    preview: "Превью 0.1.8",
     trustLabel: "Безопасность",
     trustTitle: ["Понимать, кому", "вы доверяете."],
     trustText:
@@ -107,7 +107,7 @@ const ru = {
     web: ["Shum в браузере", "Веб-версия в разработке.", "Открыть веб-версию"],
     cli: [
       "CLI",
-      "Shum для тех, кто живёт в терминале: команды и полноэкранный интерфейс. Превью 0.1.7 для macOS 15 и новее, Apple Silicon и Intel.",
+      "Shum для тех, кто живёт в терминале: команды и полноэкранный интерфейс. Превью 0.1.8 для macOS 15 и новее, Apple Silicon и Intel.",
     ],
     brewNote: "macOS 15 и новее, Apple Silicon и Intel. Обновление командой brew upgrade.",
     curlNote: "Без Homebrew и без sudo. Скачивает выпуск из GitHub Releases и сверяет SHA-256.",
@@ -338,7 +338,7 @@ const en: Dict = {
       ["CLI for macOS", "CLI, via Homebrew or curl"],
       ["CLI for Linux and Windows", "CLI"],
     ],
-    preview: "Preview 0.1.7",
+    preview: "Preview 0.1.8",
     trustLabel: "Security",
     trustTitle: ["Know who", "you trust."],
     trustText:
@@ -363,7 +363,7 @@ const en: Dict = {
     web: ["Shum in the browser", "The web version is in development.", "Open web version"],
     cli: [
       "CLI",
-      "Shum for people who live in the terminal: commands and a full-screen interface. Preview 0.1.7 for macOS 15 or later, Apple Silicon and Intel.",
+      "Shum for people who live in the terminal: commands and a full-screen interface. Preview 0.1.8 for macOS 15 or later, Apple Silicon and Intel.",
     ],
     brewNote: "macOS 15 or later, Apple Silicon and Intel. Update with brew upgrade.",
     curlNote: "No Homebrew, no sudo. Downloads the release from GitHub Releases and checks its SHA-256.",
