@@ -1,4 +1,4 @@
-export const siteUrl = "https://shum.space";
+export const siteUrl = "https://getshum.tech";
 
 // The protocol lives inside the documentation, so it has no item of its own.
 export const sectionPaths = ["/", "/downloads/", "/docs/", "/security/"] as const;

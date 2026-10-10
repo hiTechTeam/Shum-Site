@@ -14,6 +14,8 @@ npm run build
 
 Development: `http://localhost:3100`. Production output: `out/`, ready for static hosting. No application server required.
 
+Published at [getshum.tech](https://getshum.tech) through GitHub Pages: every push to `main` runs `.github/workflows/deploy.yml`.
+
 ## Structure
 
 - `app/(ru)` and `app/en`: Russian at the root, English under `/en/`.
