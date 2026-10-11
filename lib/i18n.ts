@@ -85,6 +85,7 @@ const ru = {
     ],
     preview: "Превью 0.1.10",
     windowsPreview: "Превью 0.1.5",
+    appPreview: "Превью 0.1.0",
     trustLabel: "Безопасность",
     trustTitle: ["Понимать, кому", "вы доверяете."],
     trustText:
@@ -101,10 +102,16 @@ const ru = {
     android: ["Shum для Android", "Появится после версии для iPhone.", "В планах"],
     desktop: ["Десктоп", "Shum на компьютере: та же переписка, что на телефоне, и связь рядом по Bluetooth."],
     desktopApps: [
-      ["macOS", "Приложение для Mac."],
+      ["macOS", "Чаты, контакты и люди рядом по Bluetooth. Можно пользоваться вместе с CLI: они видят один и тот же профиль."],
       ["Windows", "Приложение для Windows."],
       ["Linux", "Приложение для Linux."],
     ],
+    macApp: {
+      download: "Скачать для Mac",
+      meta: "macOS 15 и новее, Apple Silicon и Intel",
+      firstOpen: "Перенесите Shum в «Программы». При первом запуске macOS предупредит, что не может проверить разработчика: откройте «Системные настройки» → «Конфиденциальность и безопасность» и нажмите «Всё равно открыть».",
+      releases: "Все версии",
+    },
     browser: ["Браузер", "Откройте вкладку и пишите. Без установки, но и без связи рядом: браузер умеет только интернет."],
     web: ["Shum в браузере", "Веб-версия в разработке.", "Открыть веб-версию"],
     cli: [
@@ -344,6 +351,7 @@ const en: Dict = {
     ],
     preview: "Preview 0.1.10",
     windowsPreview: "Preview 0.1.5",
+    appPreview: "Preview 0.1.0",
     trustLabel: "Security",
     trustTitle: ["Know who", "you trust."],
     trustText:
@@ -360,10 +368,16 @@ const en: Dict = {
     android: ["Shum for Android", "Coming after the iPhone version.", "Planned"],
     desktop: ["Desktop", "Shum on your computer: the same chats as on your phone, plus Bluetooth nearby."],
     desktopApps: [
-      ["macOS", "App for Mac."],
+      ["macOS", "Chats, contacts and people nearby over Bluetooth. Works alongside the CLI: both see the same profile."],
       ["Windows", "App for Windows."],
       ["Linux", "App for Linux."],
     ],
+    macApp: {
+      download: "Download for Mac",
+      meta: "macOS 15 or later, Apple Silicon and Intel",
+      firstOpen: "Move Shum to Applications. On first launch macOS warns that it cannot verify the developer: open System Settings → Privacy & Security and click Open Anyway.",
+      releases: "All versions",
+    },
     browser: ["Browser", "Open a tab and start writing. No install, but no nearby mode either: the browser only speaks internet."],
     web: ["Shum in the browser", "The web version is in development.", "Open web version"],
     cli: [

@@ -121,8 +121,9 @@ img { image-rendering: pixelated; }
 .btn:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
 
 /* Navigation */
+/* The header stays on top while the page scrolls. */
 .nav {
-  position: relative;
+  position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; gap: 40px;
   height: 84px; padding: 0 var(--gutter);
   background: var(--nav);
@@ -229,6 +230,7 @@ img { image-rendering: pixelated; }
 .badge.is-dev { background: var(--line); color: var(--muted); }
 .badge.is-review { background: var(--warn-bg); color: var(--warn-text); }
 .meta { font: 400 12px/18px var(--mono); color: var(--muted); }
+.small-note { font-size: 13px; line-height: 20px; }
 .btn.is-disabled { opacity: 0.5; box-shadow: none; cursor: not-allowed; font: 400 16px/20px var(--body); padding: 6px 10px; }
 
 .install { display: grid; gap: 16px; align-content: start; padding: 28px; background: var(--panel); border: 2px solid var(--line); }
@@ -256,20 +258,20 @@ img { image-rendering: pixelated; }
 .docs-menu { grid-area: menu; }
 .docs-article { grid-area: article; }
 .docs-toc { grid-area: toc; }
-.docs-menu { display: grid; gap: 4px; position: sticky; top: 24px; }
+.docs-menu { display: grid; gap: 4px; position: sticky; top: 108px; }
 .docs-menu a { padding: 10px 12px; font-size: 14px; color: var(--muted); }
 .docs-menu a:hover { color: var(--text); }
 .docs-menu a.is-active { background: var(--hero); color: var(--text); font-weight: 600; }
 .docs-article { display: grid; gap: 32px; min-width: 0; }
 .docs-article p { color: var(--muted); }
 .docs-article code { font: 400 14px var(--mono); color: var(--text); }
-.docs-toc { display: grid; gap: 16px; position: sticky; top: 24px; font-size: 14px; }
+.docs-toc { display: grid; gap: 16px; position: sticky; top: 108px; font-size: 14px; }
 .docs-toc a { color: var(--muted); }
 .docs-toc a:hover, .docs-toc a.is-active { color: var(--accent-text); }
 .docs-toc a.is-active::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 8px 2px -14px; background: var(--accent); }
 .steps { margin: 0; padding-left: 20px; color: var(--muted); display: grid; gap: 6px; }
-#cli, #transports, #profile, #contact, #stable { scroll-margin-top: 24px; }
-.doc-step { display: grid; gap: 14px; scroll-margin-top: 24px; }
+#cli, #transports, #profile, #contact, #stable { scroll-margin-top: 108px; }
+.doc-step { display: grid; gap: 14px; scroll-margin-top: 108px; }
 .doc-note { display: grid; gap: 8px; padding: 24px; background: var(--hero); }
 .doc-note strong { font-weight: 600; }
 .profile-sample { display: flex; align-items: center; gap: 24px; padding: 24px; background: var(--hero); }

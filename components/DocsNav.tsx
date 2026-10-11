@@ -39,8 +39,8 @@ function useCurrentSection(ids: string[]) {
       }
       pin.current = null;
       // The last section whose heading has reached the top, where an anchor
-      // link puts it (scroll-margin 24px).
-      const line = 80;
+      // link puts it (scroll-margin 108px: below the sticky header).
+      const line = 164;
       let found: string | null = null;
       for (const el of elements) {
         if (el.getBoundingClientRect().top <= line) found = el.id;

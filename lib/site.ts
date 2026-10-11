@@ -10,6 +10,7 @@ export const repos = [
   { name: "Shum-CLI", href: `${github}/Shum-CLI` },
   { name: "Shum-Core", href: `${github}/Shum-Core` },
   { name: "Shum-Protocol", href: `${github}/Shum-Protocol` },
+  { name: "Shum-App", href: `${github}/Shum-App` },
 ] as const;
 
 /** Each repository has README.md in English and README.ru.md in Russian. */
@@ -27,3 +28,6 @@ export const installScript = "https://raw.githubusercontent.com/hiTechTeam/Shum-
 export const installScriptSource = `${github}/Shum-CLI/blob/main/install.sh`;
 export const windowsInstallScript = "https://raw.githubusercontent.com/hiTechTeam/Shum-CLI/main/install.ps1";
 export const windowsInstallScriptSource = `${github}/Shum-CLI/blob/main/install.ps1`;
+// The latest desktop release, so the link survives new versions.
+export const macAppDownload = `${github}/Shum-App/releases/latest/download/Shum-macOS.dmg`;
+export const appReleases = `${github}/Shum-App/releases`;

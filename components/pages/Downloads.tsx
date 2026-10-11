@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Arrow, PixelStep } from "@/components/pixel";
 import { Badge, BlockHead, Install, PageHeader } from "@/components/ui";
 import { dict, href, type Lang } from "@/lib/i18n";
-import { INSTALL_SCRIPT_READY, installScript, installScriptSource, windowsInstallScript, windowsInstallScriptSource } from "@/lib/site";
+import { appReleases, INSTALL_SCRIPT_READY, installScript, installScriptSource, macAppDownload, windowsInstallScript, windowsInstallScriptSource } from "@/lib/site";
 
 const BEFORE_PATHS = ["/docs/", "/docs/#message", "/security/"];
 
@@ -41,13 +41,27 @@ export function Downloads({ lang }: { lang: Lang }) {
         <div className="container stack-24">
           <BlockHead title={t.desktop[0]} text={t.desktop[1]} />
           <div className="grid-3">
-            {t.desktopApps.map(([name, text]) => (
-              <div key={name} className="platform platform-sm">
-                <h3 className="h3 h3-lg">{name}</h3>
-                <p className="muted">{text}</p>
-                <Badge tone="dev">{c.inDev}</Badge>
-              </div>
-            ))}
+            {t.desktopApps.map(([name, text], i) =>
+              i === 0 ? (
+                <div key={name} className="platform platform-sm">
+                  <h3 className="h3 h3-lg">{name}</h3>
+                  <p className="muted">{text}</p>
+                  <Badge>{dict[lang].overview.appPreview}</Badge>
+                  <a href={macAppDownload} className="btn btn-primary">{t.macApp.download}</a>
+                  <span className="meta">{t.macApp.meta}</span>
+                  <p className="muted small-note">
+                    {t.macApp.firstOpen}{" "}
+                    <a href={appReleases} className="inline-link">{t.macApp.releases} <Arrow /></a>
+                  </p>
+                </div>
+              ) : (
+                <div key={name} className="platform platform-sm">
+                  <h3 className="h3 h3-lg">{name}</h3>
+                  <p className="muted">{text}</p>
+                  <Badge tone="dev">{c.inDev}</Badge>
+                </div>
+              ),
+            )}
           </div>
         </div>
       </section>
