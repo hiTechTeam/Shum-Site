@@ -1,7 +1,7 @@
-:HL["/_next/static/chunks/1pf8q5moc1en9.css","style"]
+:HL["/_next/static/chunks/1x48eeub5xav7.css","style"]
 :HC["/",""]
 :HL["/avatars/igor.svg","image"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"docs","h":96,"c":"$Q3"}]]
 1:[["children",{"s":"en","h":112,"c":"$Q2"}]]
-0:{"b":"8-_t6o0r9PELjTWfxEgw6","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"RTAtqQ4VCYRuHRwug1iSK","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
