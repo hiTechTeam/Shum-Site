@@ -103,14 +103,22 @@ const ru = {
     desktop: ["Десктоп", "Shum на компьютере: та же переписка, что на телефоне, и связь рядом по Bluetooth."],
     desktopApps: [
       ["macOS", "Чаты, контакты и люди рядом по Bluetooth. Можно пользоваться вместе с CLI: они видят один и тот же профиль."],
-      ["Windows", "Приложение для Windows."],
-      ["Linux", "Приложение для Linux."],
+      ["Windows", "Чаты, контакты и люди рядом по Bluetooth. Можно пользоваться вместе с CLI для Windows."],
+      ["Linux", "Чаты, контакты и люди рядом по Bluetooth. Пакет для Debian и Ubuntu или AppImage для любого дистрибутива."],
     ],
     macApp: {
       download: "Скачать для Mac",
       meta: "macOS 15 и новее, Apple Silicon и Intel",
       firstOpen: "Перенесите Shum в «Программы». При первом запуске macOS предупредит, что не может проверить разработчика: откройте «Системные настройки» → «Конфиденциальность и безопасность» и нажмите «Всё равно открыть».",
       releases: "Все версии",
+    },
+    windowsApp: {
+      meta: "Windows 10 и 11",
+      firstOpen: "Установщик не подписан, поэтому Windows может показать «Система Windows защитила ваш компьютер»: нажмите «Подробнее» и «Выполнить в любом случае». Права администратора не нужны.",
+    },
+    linuxApp: {
+      meta: "x64 и ARM64, Bluetooth через BlueZ",
+      firstOpen: "Пакет .deb ставится командой sudo apt install ./файл.deb. AppImage сделайте исполняемым (chmod +x) и запустите.",
     },
     browser: ["Браузер", "Откройте вкладку и пишите. Без установки, но и без связи рядом: браузер умеет только интернет."],
     web: ["Shum в браузере", "Веб-версия в разработке.", "Открыть веб-версию"],
@@ -369,14 +377,22 @@ const en: Dict = {
     desktop: ["Desktop", "Shum on your computer: the same chats as on your phone, plus Bluetooth nearby."],
     desktopApps: [
       ["macOS", "Chats, contacts and people nearby over Bluetooth. Works alongside the CLI: both see the same profile."],
-      ["Windows", "App for Windows."],
-      ["Linux", "App for Linux."],
+      ["Windows", "Chats, contacts and people nearby over Bluetooth. Works alongside the Windows CLI."],
+      ["Linux", "Chats, contacts and people nearby over Bluetooth. A package for Debian and Ubuntu, or an AppImage for any distribution."],
     ],
     macApp: {
       download: "Download for Mac",
       meta: "macOS 15 or later, Apple Silicon and Intel",
       firstOpen: "Move Shum to Applications. On first launch macOS warns that it cannot verify the developer: open System Settings → Privacy & Security and click Open Anyway.",
       releases: "All versions",
+    },
+    windowsApp: {
+      meta: "Windows 10 and 11",
+      firstOpen: "The installer is not signed, so Windows may say it protected your PC: click More info, then Run anyway. No administrator rights needed.",
+    },
+    linuxApp: {
+      meta: "x64 and ARM64, Bluetooth through BlueZ",
+      firstOpen: "Install the .deb with sudo apt install ./file.deb. Make the AppImage executable (chmod +x) and run it.",
     },
     browser: ["Browser", "Open a tab and start writing. No install, but no nearby mode either: the browser only speaks internet."],
     web: ["Shum in the browser", "The web version is in development.", "Open web version"],

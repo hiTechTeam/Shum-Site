@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Arrow, PixelStep } from "@/components/pixel";
 import { Badge, BlockHead, Install, PageHeader } from "@/components/ui";
 import { dict, href, type Lang } from "@/lib/i18n";
-import { appReleases, INSTALL_SCRIPT_READY, installScript, installScriptSource, macAppDownload, windowsInstallScript, windowsInstallScriptSource } from "@/lib/site";
+import { appDownloads, appReleases, INSTALL_SCRIPT_READY, installScript, installScriptSource, macAppDownload, windowsInstallScript, windowsInstallScriptSource } from "@/lib/site";
 
 const BEFORE_PATHS = ["/docs/", "/docs/#message", "/security/"];
 
@@ -41,27 +41,36 @@ export function Downloads({ lang }: { lang: Lang }) {
         <div className="container stack-24">
           <BlockHead title={t.desktop[0]} text={t.desktop[1]} />
           <div className="grid-3">
-            {t.desktopApps.map(([name, text], i) =>
-              i === 0 ? (
+            {t.desktopApps.map(([name, text], i) => {
+              const preview = <Badge>{dict[lang].overview.appPreview}</Badge>;
+              const releases = <a href={appReleases} className="inline-link">{t.macApp.releases} <Arrow /></a>;
+              if (i === 0)
+                return (
+                  <div key={name} className="platform platform-sm">
+                    <h3 className="h3 h3-lg">{name}</h3>
+                    <p className="muted">{text}</p>
+                    {preview}
+                    <a href={macAppDownload} className="btn btn-primary">{t.macApp.download}</a>
+                    <span className="meta">{t.macApp.meta}</span>
+                    <p className="muted small-note">{t.macApp.firstOpen} {releases}</p>
+                  </div>
+                );
+              const [files, info] = i === 1 ? [appDownloads.windows, t.windowsApp] : [appDownloads.linux, t.linuxApp];
+              return (
                 <div key={name} className="platform platform-sm">
                   <h3 className="h3 h3-lg">{name}</h3>
                   <p className="muted">{text}</p>
-                  <Badge>{dict[lang].overview.appPreview}</Badge>
-                  <a href={macAppDownload} className="btn btn-primary">{t.macApp.download}</a>
-                  <span className="meta">{t.macApp.meta}</span>
-                  <p className="muted small-note">
-                    {t.macApp.firstOpen}{" "}
-                    <a href={appReleases} className="inline-link">{t.macApp.releases} <Arrow /></a>
-                  </p>
+                  {preview}
+                  <div className="download-list">
+                    {files.map(([label, url], n) => (
+                      <a key={label} href={url} className={n === 0 ? "btn btn-primary" : "btn btn-secondary"}>{label}</a>
+                    ))}
+                  </div>
+                  <span className="meta">{info.meta}</span>
+                  <p className="muted small-note">{info.firstOpen} {releases}</p>
                 </div>
-              ) : (
-                <div key={name} className="platform platform-sm">
-                  <h3 className="h3 h3-lg">{name}</h3>
-                  <p className="muted">{text}</p>
-                  <Badge tone="dev">{c.inDev}</Badge>
-                </div>
-              ),
-            )}
+              );
+            })}
           </div>
         </div>
       </section>
